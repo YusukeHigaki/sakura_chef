@@ -113,5 +113,11 @@ execute "chown -R user['name']:user['name'] /var/www/html/" do
     command "chown -R " + user['name'] + ":" + user['name'] + " /var/www/html/"
 end
 
+# index.htmlの設置
+template "/var/www/html/index.html" do
+    owner "root"
+    group "root"
+    mode 0644
+end
 
 
