@@ -1,0 +1,11 @@
+*filter
+:INPUT   DROP   [0:0]
+:OUTPUT  ACCEPT [0:0]
+:FORWARD DROP   [0:0]
+
+-A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+-A INPUT -i lo -j ACCEPT
+-A INPUT -p icmp -j ACCEPT
+-A INPUT -m state --state NEW -m tcp -p tcp --dport <%= node['sshd']['port'] %> -j ACCEPT
+-A INPUT -m state --state NEW -m tcp -p tcp --dport <%= node['httpd']['port'] %> -j ACCEPT
+COMMIT

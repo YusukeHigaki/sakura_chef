@@ -1,0 +1,14 @@
+{
+    "httpd": {
+        "port": 80
+    },
+    "sshd": {
+        "port": 22
+    },
+    "run_list": [
+        "recipe[sakura]"
+    ],
+    "automatic": {
+        "ipaddress": "harmony"
+    }
+}

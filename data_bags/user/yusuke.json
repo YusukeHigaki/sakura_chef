@@ -1,0 +1,15 @@
+{
+  "id": "yusuke",
+  "name": {
+    "encrypted_data": "uHMZoDrjXXvNbKU3r9GBUQJKl97cjsiBi4q7PC35jBI=\n",
+    "iv": "aBfLWaJ4YmNVrUJsqHQTUg==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "password": {
+    "encrypted_data": "+JhCHpV9oUy/xWbFiId+8QT6jis9NiyTlOXHnwk7xXdVbn7AjoBxN2y+1crC\n1zFlnJQXdbe8sC001EXuTgK0UQ==\n",
+    "iv": "faSJTU/sSGFsL6sbKI+XDw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}
