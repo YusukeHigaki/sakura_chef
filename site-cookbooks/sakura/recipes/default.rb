@@ -26,7 +26,7 @@ end
 # wheelグループに追加
 group "wheel" do
     action :modify
-    members [user['name'],'vagrant']
+    members [user['name']]
 end
 
 # wheelグループにsudo権限を付与
@@ -63,15 +63,14 @@ template "/etc/ssh/sshd_config" do
 end
 
 # ファイヤーウォールの設定
-service "iptables" do
-    action [:start, :enable]
-    supports :status => true, :restart => true, :reload => true
-end
-
 template "/etc/sysconfig/iptables" do
     owner "root"
     group "root"
-    notifies :reload, 'service[iptables]'
+end
+
+service "iptables" do
+    action [:start, :enable]
+    supports :status => true, :restart => true, :reload => true
 end
 
 # Apach、PHP、MySqlのインストール
